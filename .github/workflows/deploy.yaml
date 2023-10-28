@@ -18,4 +18,4 @@ jobs:
           username: root
           host: vps.jan-bredow.de
           password: ${{ secrets.password }}
-          script: 'cd /opt/Bredow-Systems-Hub && chmod +x ../.scripts/deploy.sh && ../.scripts/deploy.sh'
+          script: 'cd /opt/Bredow-Systems-Hub && chmod +x .scripts/deploy.sh && .scripts/deploy.sh'
