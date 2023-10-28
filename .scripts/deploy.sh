@@ -7,6 +7,8 @@ echo "Deployment started ..."
 # if already is in maintenance mode    
 #(php artisan down) || true
 
+git config --global --add safe.directory /opt/Bredow-Systems-Hub/
+
 git reset --hard
 
 # Pull the latest version of the app
