@@ -1,0 +1,42 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+.hub {
+    text-align: center;
+}
+.container {
+    display: inline-block;
+    width: 200px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+.container-title {
+    text-align: center;
+    font-weight: bold;
+    margin-top: 10px;
+}
+.container-description {
+    text-align: center;
+}
+.container-button {
+    text-align: center;
+    margin: 10px;
+}
+.stat-container {
+    display: inline-block;
+    width: 200px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+.stat-container-title {
+    text-align: center;
+    font-weight: bold;
+    margin-top: 10px;
+}
+.stat-container-status {
+    text-align: center;
+    margin-top: 10px;
+}

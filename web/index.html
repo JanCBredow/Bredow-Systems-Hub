@@ -3,17 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <script src="js/app.js"></script>
+
     <title>Bredow Systems - Hub</title>
 </head>
 
 <body>
+    <div class="hub">
+        <h1>Bredow Systems Hub</h1>
 
-    <div>
+        <div class="container" onclick="toggleContainer(this)">
+            <div class="container-title">Container 1</div>
+            <div class="container-description">Beschreibung für Container 1</div>
+            <div class="container-button"><button onclick="openURL('URL_für_Container_1')">Öffnen</button></div>
+        </div>
 
-        <h1>Bredow Systems - Hub</h1>
+        <div class="container" onclick="toggleContainer(this)">
+            <div class="container-title">Container 2</div>
+            <div class="container-description">Beschreibung für Container 2</div>
+            <div class="container-button"><button onclick="openURL('URL_für_Container_2')">Öffnen</button></div>
+        </div>
 
+        <div class="container" onclick="toggleContainer(this)">
+            <div class="container-title">Container 3</div>
+            <div class="container-description">Beschreibung für Container 3</div>
+            <div class="container-button"><button onclick="openURL('URL_für_Container_3')">Öffnen</button></div>
+        </div>
+
+        <div class="container" onclick="toggleContainer(this)">
+            <div class="container-title">Container 4</div>
+            <div class="container-description">Beschreibung für Container 4</div>
+            <div class="container-button"><button onclick="openURL('URL_für_Container_4')">Öffnen</button></div>
+        </div>
+
+        <div class="stat-container" onclick="toggleContainer(this)">
+            <div class="stat-container-title">Statistik Container 1</div>
+            <div class="stat-container-status" id="stat-container-1-status">OFFLINE</div>
+        </div>
+
+        <div class="stat-container" onclick="toggleContainer(this)">
+            <div class="stat-container-title">Statistik Container 2</div>
+            <div class="stat-container-status" id="stat-container-2-status">OFFLINE</div>
+        </div>
     </div>
-
+    
 </body>
 
 </html>
