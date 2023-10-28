@@ -17,7 +17,7 @@ function checkWebsiteReachability(url, elementId) {
 }
 
 setInterval(function () {
-    checkWebsiteReachability('https://bredow.systems', 'stat-container-2-status');
+    checkWebsiteReachability('http://bredow.systems', 'stat-container-2-status');
 }, 5000);
 
 function updateStatus(elementId, status) {
