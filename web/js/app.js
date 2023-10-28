@@ -23,4 +23,3 @@ setInterval(function () {
 function updateStatus(elementId, status) {
     document.getElementById(elementId).textContent = status;
 }
-te
