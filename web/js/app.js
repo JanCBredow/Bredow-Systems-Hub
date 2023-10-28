@@ -7,19 +7,23 @@ function openURL(url) {
 }
 
 setInterval(function () {
-    checkPortReachability('vps.jan-bredow.de', 22, 'stat-container-1-status');
-    checkPortReachability('bredow.systems', 80, 'stat-container-2-status');
+    checkServerReachability('https://mail.jan-bredow.de', 'stat-container-1-status');
+    checkServerReachability('https://bredow.systems', 'stat-container-2-status');
 }, 5000);
 
-function checkPortReachability(host, port, elementId) {
-    var img = new Image();
-    img.src = '//' + host + ':' + port;
-    img.onload = function() {
+function checkServerReachability(url, elementId) {
+    var xhr = new XMLHttpRequest();
+    xhr.open('HEAD', url, true);
+
+    xhr.onload = function() {
         updateStatus(elementId, 'ONLINE');
     };
-    img.onerror = function() {
+
+    xhr.onerror = function() {
         updateStatus(elementId, 'OFFLINE');
     };
+
+    xhr.send();
 }
 
 function updateStatus(elementId, status) {
