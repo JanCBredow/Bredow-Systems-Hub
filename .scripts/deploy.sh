@@ -10,7 +10,7 @@ echo "Deployment started ..."
 git reset --hard
 
 # Pull the latest version of the app
-git pull origin master && chown www-data:www-data /opt/b-hub -R
+git pull origin master && chown www-data:www-data /opt/Bredow-Systems-Hub -R
 
 # Install composer dependencies
 #composer install --no-dev --no-interaction --prefer-dist --optimize-autoloader && chown www-data:www-data /opt/jb -R

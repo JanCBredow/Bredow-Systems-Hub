@@ -17,5 +17,5 @@ jobs:
         with:
           username: root
           host: vps.jan-bredow.de
-          key: ${{ secrets.SSH_KEY }}
-          script: 'cd /opt/b-hub/ && chmod +x ../.scripts/deploy.sh && ../.scripts/deploy.sh'
+          password: ${{ secrets.SSH_KEY }}
+          script: 'cd /opt/Bredow-Systems-Hub && chmod +x ../.scripts/deploy.sh && ../.scripts/deploy.sh'
