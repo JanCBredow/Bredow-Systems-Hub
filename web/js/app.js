@@ -24,7 +24,7 @@ function pingServer(host, port, timeout, callback) {
         ping: null
     };
 
-    var socket = new WebSocket('ws://' + host + ':' + port);
+    var socket = new WebSocket('wss://' + host + ':' + port);
 
     socket.onopen = function () {
         response.status = 'ONLINE';
