@@ -1,22 +1,12 @@
-function toggleContainer(container) {
-    container.classList.toggle('open');
-}
-
-function openURL(url) {
-    window.open(url);
-}
-
-setInterval(function () {
-    checkServerReachability('https://mail.jan-bredow.de', 'stat-container-1-status');
-    checkServerReachability('https://bredow.systems', 'stat-container-2-status');
-}, 5000);
-
-function checkServerReachability(url, elementId) {
+function checkWebsiteReachability(url, elementId) {
+    var startTime = Date.now();
     var xhr = new XMLHttpRequest();
-    xhr.open('HEAD', url, true);
+    xhr.open('GET', url, true);
 
     xhr.onload = function() {
-        updateStatus(elementId, 'ONLINE');
+        var endTime = Date.now();
+        var ping = endTime - startTime;
+        updateStatus(elementId, 'ONLINE (' + ping + 'ms)');
     };
 
     xhr.onerror = function() {
@@ -26,6 +16,11 @@ function checkServerReachability(url, elementId) {
     xhr.send();
 }
 
+setInterval(function () {
+    checkWebsiteReachability('https://bredow.systems', 'stat-container-2-status');
+}, 5000);
+
 function updateStatus(elementId, status) {
     document.getElementById(elementId).textContent = status;
 }
+te
