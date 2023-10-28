@@ -9,6 +9,9 @@ echo "Deployment started ..."
 
 git reset --hard
 
+# clear old
+rm -r web
+
 # Pull the latest version of the app
 git pull origin main && chown www-data:www-data /opt/Bredow-Systems-Hub -R
 
